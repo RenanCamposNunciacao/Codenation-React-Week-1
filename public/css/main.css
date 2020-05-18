@@ -1,0 +1,316 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #F2F2F2;
+}
+
+html a {
+	text-decoration: none;
+}
+
+
+/* General */
+.container {
+	margin: 0 auto;
+	max-width: 960px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.wraper {
+	position: relative;
+}
+
+/* Header */
+.header {
+	height: 90vh;
+	background-image: url('../assets/capa-madmax2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	z-index: 1;
+}
+
+.header::after {
+	width: 100%;
+	height: 90vh;
+	position: absolute;
+	content: "";
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.61) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.header .container {
+	z-index: 1;
+}
+
+.header a {
+	color: #FFF;
+}
+
+.header a:hover {
+	color: #E4BB23;
+}
+
+.header-menu {
+	display: flex;
+	justify-content: space-between;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	align-items: flex-start;
+	height: 15vh;
+}
+
+.header-menu ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-menu ul li {
+	margin: 0 20px;
+}
+
+.header-menu a,  .header-menu span {
+	display: flex;
+	justify-content: space-between;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.userprofile {
+	display: flex;
+	align-items: center;
+}
+
+.userprofile img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.header-description {
+	color: #FFF;
+	display: flex;
+    flex-direction: column;
+    height: 75vh;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.header-description button {
+	position: relative;
+	background-color: #e4bb23;
+	color: #000;
+	border-radius: 20px;
+	border: none;
+	font-size: 18px;
+	padding: 5px 20px;
+	text-align: right;
+	font-size: 18px;
+    padding: 15px;
+    text-align: right;
+}
+
+.header-description button:hover {
+	background-color: #BC9A1D;
+}
+
+.header-description button i {
+	font-size: 18px;
+}
+
+.header-description > h1 {
+	font-size: 60px;
+	margin: 0 0 10px 0;
+}
+
+.header-description > span {
+	font-size: 18px;
+}
+
+.header-description .release-date {
+	color: #e4bb23;
+}
+
+/* Content Section */
+.categories {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+}
+
+.categories ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.categories ul li {
+	margin: 0 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid transparent;
+}
+
+.categories ul li:hover {
+	border-bottom: 1px solid #e4bb23;
+}
+
+.categories ul li a {
+	color: #e4bb23;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.movies ul {
+	padding: 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.movie-container {
+	position: relative;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 24%;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #FFF;
+	margin-bottom: 30px;
+}
+
+.movie-poster {
+	height: auto;
+	width: 100%;
+}
+
+.movie-info {
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+.movie-title {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.movie-genre {
+	padding: 7px 0;
+}
+
+.movie-genre a {
+	color: #e4bb23;
+	font-size: 10px;
+}
+
+.movie-options {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+}
+
+.movie-options span {
+	font-weight: bold;
+}
+
+.movie-options i {
+	color: #ccc;
+    cursor: pointer;
+}
+
+.movie-options i:hover {
+	color: #e74c3c;
+}
+
+.poster-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .3s ease;
+	background-color:rgba(0, 0, 0, 0.5);
+	text-align: center;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.movie-container:hover .poster-overlay {
+	opacity: 1;
+}
+
+.poster-overlay .movie-title {
+	color: #e4bb23;
+	font-size: 20px;
+}
+
+.poster-overlay a {
+	color: #e4bb23;
+	font-size: 50px;
+	padding: 20px;
+	}
+
+.poster-overlay a i {
+	color: #FFF;
+}
+
+.poster-overlay a:hover i {
+	color: #e4bb23;
+}
+
+/* Footer */
+footer {
+	background-color: #FFF;
+}
+
+footer .container {
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+
+footer ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+
+footer ul li i.fa {
+	color: #bababa;
+	justify-content: space-between;
+	list-style: none;
+	font-size: 25px;
+	padding-left: 20px;
+}
+
+footer ul li:hover i.fa-twitter {
+	color: #55acee;
+}
+
+footer ul li:hover i.fa-facebook-official {
+	color: #3b5998;
+}
+
+footer ul li:hover i.fa-instagram {
+	color: #e95950;
+}
